@@ -13,7 +13,7 @@
       "Docker": {
         "Entrypoint": [
           "bash", "-c",
-          "python hello.py",
+          "python hello.py"
         ],
         "Image": "animoids:test"
       },
