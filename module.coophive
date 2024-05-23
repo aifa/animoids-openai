@@ -6,6 +6,10 @@
   },
   "job": {
     "APIVersion": "V1beta1",
+    "Metadata": {
+        "CreatedAt": "0001-01-01T00:00:00Z",
+        "Requester": {}
+    },
     "Spec": {
       "Deal": {
         "Concurrency": 1
@@ -28,9 +32,14 @@
       },
       "Resources": {
         "GPU": "",
-      }
+        "CPU": "3",
+        "Memory": "3gb"
+      },
       "Timeout": 1800,
       "Verifier": "Noop",
+      "Wasm": {
+          "EntryModule": {}
+      },
       "outputs": [
           {
               "Name": "outputs",
