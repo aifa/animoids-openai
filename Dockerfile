@@ -14,11 +14,8 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENV OUTPUT_DIR="/outputs/"
-ENV OPENAI_API_KEY = "sk-proj-AUlOo5sBcWEmbb3nokdRT3BlbkFJ5fA2z9YsWTUEJqiRiBkU"
 
 RUN python ai.py --img_url=https://bafybeib76s7igm5ncpg3n3eno64bjhak62ua2gyqzdruaxvejngh4inxui.ipfs.w3s.link/Pope-Francis-Coat.jpg
-
-
 
 # Run the script when the container launches
 ENTRYPOINT ["python", "ai.py"]  # Replace with your script name and IPFS link if static, or handle args in entrypoint

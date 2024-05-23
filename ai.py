@@ -7,7 +7,7 @@ import requests
 import json
 import sys
 
-#load_dotenv()
+load_dotenv()
 
 open_ai_key = os.getenv("OPENAI_API_KEY")
 
