@@ -16,12 +16,12 @@
       },
       "Docker": {
         "Entrypoint": [
-          "python"
+          "python hello.py"
         ],
         "Image": "yfantisa/animoids:test",
         "EnvironmentVariables": [
             "OUTPUT_DIR=/outputs/"
-          ]
+        ]
       },
       "Engine": "Docker",
       "Network": {
@@ -37,9 +37,6 @@
       }
       "Timeout": 1800,
       "Verifier": "Noop",
-      "Wasm": {
-          "EntryModule": {}
-        },
       "outputs": [
           {
               "Name": "outputs",
