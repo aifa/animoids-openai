@@ -5,7 +5,7 @@
     "ram": 100
   },
   "job": {
-    "APIVersion": "V1beta1",
+    "APIVersion": "V1beta2",
     "Metadata": {
         "CreatedAt": "0001-01-01T00:00:00Z",
         "Requester": {}
@@ -28,7 +28,7 @@
         "Type": "full"
       },
       "PublisherSpec": {
-        "Type": "IPFS"
+        "Type": "Estuary"
       },
       "Resources": {
         "GPU": "",
@@ -43,7 +43,6 @@
       "outputs": [
           {
               "Name": "outputs",
-              "StorageSource": "IPFS",
               "path": "/outputs"
           }
       ]
