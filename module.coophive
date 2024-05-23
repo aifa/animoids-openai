@@ -17,7 +17,7 @@
         ],
         "Image": "yfantisa/animoids:test",
         "EnvironmentVariables": [
-            "OUTPUT_DIR=/outputs/",
+            "OUTPUT_DIR=/outputs/"
           ]
       },
       "Engine": "Docker",
