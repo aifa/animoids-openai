@@ -1,51 +1,47 @@
 {
   "machine": {
     "gpu": 0,
-    "cpu": 1000,
+    "cpu": 200,
     "ram": 100
   },
-  "job": {
+  "Job": {
     "APIVersion": "V1beta2",
-    "Metadata": {
-        "CreatedAt": "0001-01-01T00:00:00Z",
-        "Requester": {}
-    },
     "Spec": {
-      "Deal": {
-        "Concurrency": 1
-      },
-      "Docker": {
-        "Entrypoint": [
-          "python hello.py"
-        ],
-        "Image": "yfantisa/animoids:test",
-        "EnvironmentVariables": [
-            "OUTPUT_DIR=/outputs/"
-        ]
-      },
-      "Engine": "Docker",
-      "Network": {
-        "Type": "full"
+      "EngineSpec": {
+        "Type": "docker",
+        "Params": {
+          "Entrypoint": null,
+          "EnvironmentVariables": [],
+          "Image": "yfantisa/animoids:test",
+          "Parameters": [
+            "python hello.py",
+          ],
+          "WorkingDirectory": ""
+        }
       },
       "PublisherSpec": {
-        "Type": "Estuary"
+        "Type": "ipfs"
+      },
+      "Docker": {},
+      "Wasm": {
+        "EntryModule": {}
       },
       "Resources": {
-        "GPU": "",
-        "CPU": "3",
-        "Memory": "3gb"
+        "GPU": ""
+      },
+      "Network": {
+        "Type": "None"
       },
       "Timeout": 1800,
-      "Verifier": "Noop",
-      "Wasm": {
-          "EntryModule": {}
-      },
-      "outputs": [
-          {
-              "Name": "outputs",
-              "path": "/outputs"
-          }
-      ]
+      "Outputs": [
+        {
+          "Name": "outputs",
+          "Path": "/outputs"
+        }
+      ],
+      "Deal": {
+        "Concurrency": 1
+      }
     }
   }
 }

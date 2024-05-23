@@ -19,6 +19,8 @@ def submit():
             print(f"Response saved to {output_file}")
     else:
         print("OUTPUT environment variable not defined. Response will not be saved.", file=sys.stderr)
+    return 1
+
 
 
 
