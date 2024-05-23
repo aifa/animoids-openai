@@ -31,12 +31,13 @@
         "Type": "IPFS"
       },
       "Resources": {
-          "CPU": "3",
-          "Memory": "3gb"
+        "GPU": "",
+        "CPU": "3",
+        "Memory": "3gb"
       }
       "Timeout": 1800,
       "Verifier": "Noop",
-        "Wasm": {
+      "Wasm": {
           "EntryModule": {}
         },
       "outputs": [
