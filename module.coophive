@@ -13,8 +13,7 @@
       "Docker": {
         "Entrypoint": [
           "bash", "-c",
-          "python ai.py",
-          {{if .img_url}}{{.img_url}}{{else}}"Pass me an input called img_url, like hive run animoids:v0.1.0 --img_url=https://bafybeib76s7igm5ncpg3n3eno64bjhak62ua2gyqzdruaxvejngh4inxui.ipfs.w3s.link/Pope-Francis-Coat.jpg"{{end}}
+          "python hello.py",
         ],
         "Image": "animoids:test"
       },
