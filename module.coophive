@@ -24,11 +24,6 @@
       "PublisherSpec": {
         "Type": "IPFS"
       },
-      "Resources": {
-        "CPU": "3",
-        "Memory": "1gb",
-        "GPU": "0"
-      },
       "Timeout": 1800,
       "Verifier": "Noop"
     }
