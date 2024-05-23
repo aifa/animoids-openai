@@ -15,7 +15,7 @@
           "bash", "-c",
           "python hello.py"
         ],
-        "Image": "animoids:test"
+        "Image": "yfantisa/animoids:test"
       },
       "Engine": "Docker",
       "Network": {
