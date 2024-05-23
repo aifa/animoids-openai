@@ -15,7 +15,10 @@
           "bash", "-c",
           "python hello.py"
         ],
-        "Image": "yfantisa/animoids:test"
+        "Image": "yfantisa/animoids:test",
+        "EnvironmentVariables": [
+            "OUTPUT_DIR=/outputs/",
+          ]
       },
       "Engine": "Docker",
       "Network": {
@@ -25,7 +28,14 @@
         "Type": "IPFS"
       },
       "Timeout": 1800,
-      "Verifier": "Noop"
+      "Verifier": "Noop",
+      "outputs": [
+          {
+              "Name": "outputs",
+              "StorageSource": "IPFS",
+              "path": "/outputs"
+          }
+      ]
     }
   }
 }

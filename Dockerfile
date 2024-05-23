@@ -15,5 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ENV OUTPUT_DIR="/outputs/"
 
+ADD hello.py /app/hello.py
 # Run the script when the container launches
-ENTRYPOINT ["python", "hello.py"]  # Replace with your script name and IPFS link if static, or handle args in entrypoint
+ENTRYPOINT ["python", "/app/hello.py"]  # Replace with your script name and IPFS link if static, or handle args in entrypoint
