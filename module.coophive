@@ -16,10 +16,8 @@
             },
            "Docker": {
                 "Entrypoint": [
-                    "bash", "-c",
-                    "python3 hello.py 2>/dev/null"
                 ],
-                "Image": "yfantisa/animoids:latest@sha256:dd2efd780d2a83cc803ff27b23f34757f2db55c295ab182233bac7db0ba9be5f"
+                "Image": "yfantisa/animoids:latest@sha256:7ed5340ee93884a27364847ef814aa49789c9996990a6473c0acb23529f4528a"
             },
             "Engine": "Docker",
             "Language": {
