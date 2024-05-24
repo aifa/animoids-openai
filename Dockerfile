@@ -8,4 +8,4 @@ WORKDIR /app
 
 COPY . /app
 # Run the script when the container launches
-CMD ["python", "hello.py"]  # Replace with your script name and IPFS link if static, or handle args in entrypoint
+CMD ["python", "/app/hello.py"]  # Replace with your script name and IPFS link if static, or handle args in entrypoint

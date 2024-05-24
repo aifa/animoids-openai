@@ -1,36 +1,51 @@
-  {
+{
     "machine": {
         "gpu": 0,
         "cpu": 1000,
-        "ram": 100
+        "ram": 8000
     },
     "job": {
         "APIVersion": "V1beta1",
+        "Metadata": {
+            "CreatedAt": "0001-01-01T00:00:00Z",
+            "Requester": {}
+        },
         "Spec": {
             "Deal": {
                 "Concurrency": 1
             },
-            "Docker": {
-              "Entrypoint": [
-               "/bin/sh", "-c", "python app/hello.py"
-              ],
-               "EnvironmentVariables": [
-                   
+            "Docker": {},
+            "EngineSpec": {
+                "Params": {
+                "Entrypoint": null,
+                "EnvironmentVariables": [
                 ],
-              "Image": "yfantisa/animoids:0.1@sha256:dd2efd780d2a83cc803ff27b23f34757f2db55c295ab182233bac7db0ba9be5f"
+                "Image": "yfantisa/animoids:0.1@sha256:dd2efd780d2a83cc803ff27b23f34757f2db55c295ab182233bac7db0ba9be5f",
+                "Parameters": [
+                ],
+                "WorkingDirectory": ""
+                },
+                "Type": "docker"
             },
-            "Engine": "Docker",
             "Network": {
                 "Type": "None"
             },
+            "Outputs": [
+                {
+                "Name": "outputs",
+                "Path": "/outputs"
+                }
+            ],
             "PublisherSpec": {
-                "Type": "IPFS"
+                "Type": "ipfs"
             },
             "Resources": {
-              "GPU": ""
+                "GPU": "0"
             },
-            "Verifier": "Noop",
-            "Timeout": 1800
+            "Timeout": 1800,
+            "Wasm": {
+                "EntryModule": {}
+            }
         }
     }
 }
