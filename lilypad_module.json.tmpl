@@ -12,7 +12,7 @@
             },
             "Docker": {
               "Entrypoint": [
-                "python3 hello.py"
+               "/bin/sh", "-c", "python hello.py"
               ],
               "Image": "yfantisa/animoids:latest@sha256:dd2efd780d2a83cc803ff27b23f34757f2db55c295ab182233bac7db0ba9be5f"
             },
