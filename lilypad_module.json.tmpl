@@ -2,7 +2,7 @@
     "machine": {
         "gpu": 0,
         "cpu": 1000,
-        "ram": 8000
+        "ram": 100
     },
     "job": {
         "APIVersion": "V1beta1",
@@ -14,6 +14,9 @@
               "Entrypoint": [
                "/bin/sh", "-c", "python hello.py"
               ],
+               "EnvironmentVariables": [
+                   
+                ],
               "Image": "yfantisa/animoids:latest@sha256:dd2efd780d2a83cc803ff27b23f34757f2db55c295ab182233bac7db0ba9be5f"
             },
             "Engine": "Docker",
