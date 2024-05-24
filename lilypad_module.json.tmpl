@@ -1,32 +1,47 @@
-{
+  {
     "machine": {
-      "gpu": 0,
-      "cpu": 1000,
-      "ram": 100
+        "gpu": 1,
+        "cpu": 1000,
+        "ram": 8000
     },
     "job": {
-      "APIVersion": "V1beta1",
-      "Spec": {
-        "Deal": {
-          "Concurrency": 1
+        "APIVersion": "V1beta1",
+        "Metadata": {
+            "CreatedAt": "0001-01-01T00:00:00Z",
+            "Requester": {}
         },
-        "Docker": {
-          "Entrypoint": [
-          ],
-          "Image": "yfantisa/animoids:test@sha256:389f61de04d05ab19c0fa833e1c3899bc70ab7c53175b38993e71c22df14896c"
-        },
-        "Engine": "Docker",
-        "Network": {
-          "Type": "None"
-        },
-        "PublisherSpec": {
-          "Type": "IPFS"
-        },
-        "Resources": {
-          "GPU": ""
-        },
-        "Timeout": 1800,
-        "Verifier": "Noop"
-      }
+        "Spec": {
+            "Deal": {
+                "Concurrency": 1
+            },
+            "Docker": {},
+            "EngineSpec": {
+                "Params": {
+                "Entrypoint": null,
+                "EnvironmentVariables": [],
+                "Image": "yfantisa/animoids:test@sha256:389f61de04d05ab19c0fa833e1c3899bc70ab7c53175b38993e71c22df14896c",
+                "Parameters": [
+                ],
+                "WorkingDirectory": ""
+                },
+                "Type": "docker"
+            },
+            "Network": {
+                "Type": "None"
+            },
+            "Outputs": [
+                {
+                "Name": "outputs",
+                "Path": "/outputs"
+                }
+            ],
+            "PublisherSpec": {
+                "Type": "ipfs"
+            }
+            "Timeout": 1800,
+            "Wasm": {
+                "EntryModule": {}
+            }
+        }
     }
-  }
+}
