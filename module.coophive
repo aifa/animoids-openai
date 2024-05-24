@@ -5,14 +5,14 @@
     "ram": 100
   },
   "Job": {
-    "APIVersion": "V1beta2",
+    "APIVersion": "V1beta1",
     "Spec": {
       "EngineSpec": {
         "Type": "docker",
         "Params": {
-          "Entrypoint": null,
+          "Entrypoint": ["python hello.py"],
           "EnvironmentVariables": [],
-          "Image": "yfantisa/animoids:test",
+          "Image": "yfantisa/animoids:1.0@sha256:9d60ff0bd3b1de8f65ea7e97c66b7a79e4298c54020ce5be195e79cbbed5fbec",
           "Parameters": [
             "python hello.py",
           ],
