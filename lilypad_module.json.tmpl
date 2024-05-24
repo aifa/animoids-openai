@@ -1,6 +1,6 @@
   {
     "machine": {
-        "gpu": 1,
+        "gpu": 0,
         "cpu": 1000,
         "ram": 8000
     },
@@ -11,22 +11,15 @@
                 "Concurrency": 1
             },
             "Docker": {
-              "Image": "yfantisa/animoids:1.0@sha256:9d60ff0bd3b1de8f65ea7e97c66b7a79e4298c54020ce5be195e79cbbed5fbec",
               "Entrypoint": [
                 "/bin/sh", "-c", "python lilypad_sarsa.py"
-              ]
+              ],
+              "Image": "yfantisa/animoids:1.0@sha256:9d60ff0bd3b1de8f65ea7e97c66b7a79e4298c54020ce5be195e79cbbed5fbec"
             },
             "Engine": "Docker",
             "Network": {
                 "Type": "None"
             },
-            "Outputs": [
-                {
-                    "Name": "output",
-                    "StorageSource": "IPFS",
-                    "path": "/output"
-                }
-            ],
             "PublisherSpec": {
                 "Type": "IPFS"
             },
