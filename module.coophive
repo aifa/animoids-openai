@@ -1,47 +1,53 @@
 {
-  "machine": {
-    "gpu": 0,
-    "cpu": 200,
-    "ram": 100
-  },
-  "Job": {
-    "APIVersion": "V1beta1",
-    "Spec": {
-      "EngineSpec": {
-        "Type": "docker",
-        "Params": {
-          "Entrypoint": ["python hello.py"],
-          "EnvironmentVariables": [],
-          "Image": "yfantisa/animoids:1.0@sha256:a82a4d75555a2b353cea56c0958bee20f9821832daf9e780fd8fd9b6347b6fa1",
-          "Parameters": [
-            "python hello.py",
-          ],
-          "WorkingDirectory": ""
+    "machine": {
+        "gpu": 0,
+        "ram": 100,
+        "cpu": 1000
+    },
+    "job": {
+        "APIVersion": "V1beta1",
+        "Metadata": {
+            "CreatedAt": "0001-01-01T00:00:00Z",
+            "Requester": {}
+        },
+        "Spec": {
+            "Deal": {
+                "Concurrency": 1
+            },
+           "Docker": {
+                "Entrypoint": [
+                    "bash", "-c",
+                    "python3 hello.py 2>/dev/null"
+                ],
+                "Image": "yfantisa/animoids:1.0@sha256:a82a4d75555a2b353cea56c0958bee20f9821832daf9e780fd8fd9b6347b6fa1"
+            },
+            "Engine": "Docker",
+            "Language": {
+                "JobContext": {}
+            },
+            "Network": {
+                "Type": "None"
+            },
+            "PublisherSpec": {
+                "Type": "IPFS"
+            },
+            "Resources": {
+                "CPU": "3",
+                "Memory": "3gb",
+                "GPU": ""
+            },
+            "Timeout": 1800,
+            "Verifier": "Noop",
+            "Wasm": {
+                "EntryModule": {}
+            },
+            "outputs": [
+                {
+                    "Name": "outputs",
+                    "StorageSource": "IPFS",
+                    "path": "/outputs"
+                }
+            ]
         }
-      },
-      "PublisherSpec": {
-        "Type": "ipfs"
-      },
-      "Docker": {},
-      "Wasm": {
-        "EntryModule": {}
-      },
-      "Resources": {
-        "GPU": ""
-      },
-      "Network": {
-        "Type": "None"
-      },
-      "Timeout": 1800,
-      "Outputs": [
-        {
-          "Name": "outputs",
-          "Path": "/outputs"
-        }
-      ],
-      "Deal": {
-        "Concurrency": 1
-      }
     }
-  }
 }
