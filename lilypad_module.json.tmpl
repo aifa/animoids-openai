@@ -11,7 +11,14 @@
                 "Concurrency": 1
             },
             "Docker": {
-              "Image": "yfantisa/animoids:1.0@sha256:96265b3e0b7d06492d5aecd3ab4f21c125a0cfd83f297b9b810caf1c5c433ad3"
+              "Image": "yfantisa/animoids:1.0@sha256:96265b3e0b7d06492d5aecd3ab4f21c125a0cfd83f297b9b810caf1c5c433ad3",
+              "EnvironmentVariables": [
+                "OUTPUT_DIR=/output/"
+              ],
+                "Entrypoint": [
+                "bash", "-c",
+                    "python3 ./app/hello.py"
+                ]
             },
             "Engine": "Docker",
             "Network": {
@@ -19,8 +26,9 @@
             },
             "Outputs": [
                 {
-                "Name": "outputs",
-                "Path": "/outputs"
+                    "Name": "output",
+                    "StorageSource": "IPFS",
+                    "path": "/output"
                 }
             ],
             "PublisherSpec": {
@@ -29,6 +37,7 @@
             "Resources": {
               "GPU": ""
             },
+             "Verifier": "Noop",
             "Timeout": 1800,
             "Wasm": {
                 "EntryModule": {}
