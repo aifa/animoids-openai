@@ -6,26 +6,14 @@
     },
     "job": {
         "APIVersion": "V1beta1",
-        "Metadata": {
-            "CreatedAt": "0001-01-01T00:00:00Z",
-            "Requester": {}
-        },
         "Spec": {
             "Deal": {
                 "Concurrency": 1
             },
-            "Docker": {},
-            "EngineSpec": {
-                "Params": {
-                "Entrypoint": null,
-                "EnvironmentVariables": [],
-                "Image": "yfantisa/animoids:1.0@sha256:96265b3e0b7d06492d5aecd3ab4f21c125a0cfd83f297b9b810caf1c5c433ad3",
-                "Parameters": [
-                ],
-                "WorkingDirectory": ""
-                },
-                "Type": "docker"
+            "Docker": {
+              "Image": "yfantisa/animoids:1.0@sha256:96265b3e0b7d06492d5aecd3ab4f21c125a0cfd83f297b9b810caf1c5c433ad3"
             },
+            "Engine": "Docker",
             "Network": {
                 "Type": "None"
             },
@@ -36,7 +24,10 @@
                 }
             ],
             "PublisherSpec": {
-                "Type": "ipfs"
+                "Type": "IPFS"
+            },
+            "Resources": {
+              "GPU": ""
             },
             "Timeout": 1800,
             "Wasm": {
