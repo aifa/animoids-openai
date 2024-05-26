@@ -19,6 +19,8 @@
                 "Params": {
                 "Entrypoint": null,
                 "EnvironmentVariables": [
+                    "OUTPUT_DIR=/output/",
+                    "INPUT_DIR=/input/"
                 ],
                 "Image": "yfantisa/animoids:latest@sha256:7ed5340ee93884a27364847ef814aa49789c9996990a6473c0acb23529f4528a",
                 "Parameters": [
@@ -30,6 +32,14 @@
             "Network": {
                 "Type": "None"
             },
+            "inputs": [
+                {
+                    "CID": {{.FilesCID}},
+                    "Name": "input_img",
+                    "StorageSource": "IPFS",
+                    "path": "/input"
+                }
+            ],
             "Outputs": [
                 {
                 "Name": "outputs",
